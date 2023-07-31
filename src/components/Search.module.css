@@ -1,0 +1,23 @@
+.search {
+  display: flex;
+  gap: 1.5rem;
+
+  margin: 2rem 0;
+}
+
+.icon {
+  cursor: pointer;
+}
+
+.input {
+  background: transparent;
+  outline: none;
+
+  font-size: 1.5rem;
+  font-weight: 300;
+
+  color: #fff;
+  border: 0;
+
+  width: 100%;
+}
