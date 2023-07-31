@@ -1,0 +1,14 @@
+.active {
+  filter: brightness(0) saturate(100%) invert(100%) sepia(48%) saturate(2%)
+    hue-rotate(118deg) brightness(104%) contrast(101%);
+}
+
+img {
+  width: 100%;
+}
+
+body,
+input {
+  color: #ffffff;
+  font-family: "Outfit", sans-serif;
+}
