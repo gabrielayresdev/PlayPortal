@@ -30,11 +30,17 @@
   top: 50%;
   transform: translate(-50%, -50%);
 
-  display: flex;
+  display: none;
   align-items: center;
   gap: 0.5rem;
 
   opacity: 1;
+
+  transition: all 0.3s;
+}
+
+.thumbnail_image:hover .redirect_button {
+  display: flex;
 }
 
 .arrow {
