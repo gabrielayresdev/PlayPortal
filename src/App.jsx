@@ -6,6 +6,7 @@ import Search from "./components/Search";
 import Movies from "./components/main/Movies";
 import TvSeries from "./components/main/TvSeries";
 import Bookmark from "./components/main/Bookmark";
+import Error from "./components/Error";
 
 function App() {
   return (
@@ -19,6 +20,7 @@ function App() {
             <Route path="movies" element={<Movies />} />
             <Route path="tv" element={<TvSeries />} />
             <Route path="bookmark" element={<Bookmark />} />
+            <Route path="*" element={<Error />} />
           </Routes>
         </div>
       </BrowserRouter>
