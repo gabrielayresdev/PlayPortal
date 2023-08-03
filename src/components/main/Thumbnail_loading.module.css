@@ -1,0 +1,47 @@
+.loading_thumbnail {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+.loading_image {
+  display: block;
+  width: 100%;
+  aspect-ratio: 16/9;
+}
+
+.loading_info {
+  display: block;
+  width: 50%;
+  height: 13px;
+}
+
+.loading_title {
+  display: block;
+  width: 60%;
+  height: 18px;
+}
+
+.loading_image,
+.loading_info,
+.loading_title {
+  background-image: linear-gradient(
+    -90deg,
+    #a7a6a6,
+    transparent,
+    #bbb,
+    #a7a6a6
+  );
+  background-color: #bbb;
+  background-size: 200%;
+  animation: loading 1s linear infinite;
+}
+
+@keyframes loading {
+  0% {
+    background-position: 200%;
+  }
+  100% {
+    background-position: 0%;
+  }
+}

@@ -6,7 +6,6 @@ const Thumbnail = ({ data, type }) => {
     <div className={styles.thumbnail}>
       <div className={styles.thumbnail_image}>
         <img
-          className={styles.thumbnail_image}
           src={`https://www.themoviedb.org/t/p/original${data.backdrop_path}`}
         />
         <span className={styles.redirect_button}>

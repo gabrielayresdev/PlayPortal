@@ -2,6 +2,8 @@ import React from "react";
 import styles from "./ShowsFeed.module.css";
 import Thumbnail from "./Thumbnail";
 import useFetch from "../../hooks/useFetch";
+import Thumbnail_loading from "./Thumbnail_loading";
+import Loading from "./Loading";
 
 const ShowsFeed = ({ page }) => {
   const { error, loading, data, request } = useFetch();
@@ -12,7 +14,8 @@ const ShowsFeed = ({ page }) => {
     request(url);
   }, [request, page]);
 
-  if (loading) return <div>Carregando</div>;
+  console.log(loading);
+  if (loading) return <Loading />;
   if (error) return <div>{error}</div>;
   if (data)
     return (
