@@ -54,7 +54,7 @@
   }
 }
 
-@media (max-width: 480px) {
+@media (max-width: 768px) {
   .menu {
     border-radius: 0;
     padding: 0.5rem 1rem;
