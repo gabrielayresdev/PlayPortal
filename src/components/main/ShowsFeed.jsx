@@ -4,14 +4,18 @@ import Thumbnail from "./Thumbnail";
 import useFetch from "../../hooks/useFetch";
 import Loading from "./Loading";
 import Error from "../Error";
+import { buscaPrincipaisFilmes } from "../../Api";
 
 const ShowsFeed = ({ page }) => {
   const { error, loading, data, request } = useFetch();
 
   React.useEffect(() => {
-    const url = `https://api.themoviedb.org/3/discover/movie?api_key=03de48f66303824c443b36741744feac&include_adult=false&include_video=false&language=en-US&page=1&sort_by=vote_average.desc&vote_count.gte=1000&language=pt-BR&page=${page}`;
+    async function fetchMovies() {
+      const { url } = buscaPrincipaisFilmes(page, 1000);
+      request(url);
+    }
 
-    request(url);
+    fetchMovies();
   }, [request, page]);
 
   console.log(loading);
