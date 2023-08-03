@@ -1,6 +1,6 @@
 .main {
   display: grid;
-  grid-template-columns: repeat(4, 1fr);
+  grid-template-columns: repeat(5, 1fr);
   align-items: center;
   column-gap: 2.5rem;
   row-gap: 2rem;
@@ -11,4 +11,13 @@
 .title {
   font-weight: 300;
   font-size: 2rem;
+}
+
+.button_container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  width: 100%;
+  margin-top: 3rem;
 }
