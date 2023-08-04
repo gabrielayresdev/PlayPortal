@@ -12,6 +12,7 @@ import {
   buscaSeriesPopulares,
 } from "./api";
 import Catalogue from "./components/Main/Catalogue";
+import SearchResults from "./components/Main/SearchResults";
 
 const content = {
   movies: {
@@ -39,7 +40,7 @@ function App() {
           <Routes>
             <Route path="/" element={<Home />} />
             <Route
-              path="movies"
+              path="/movies"
               element={
                 <Catalogue
                   content={content.movies}
@@ -49,7 +50,7 @@ function App() {
               }
             />
             <Route
-              path="tv"
+              path="/tv"
               element={
                 <Catalogue
                   content={content.tv}
@@ -58,7 +59,8 @@ function App() {
                 />
               }
             />
-            <Route path="bookmark" element={<Bookmark />} />
+            <Route path="/bookmark" element={<Bookmark />} />
+            <Route path="/search/:nome" element={<SearchResults />} />
             <Route path="*" element={<NotFound />} />
           </Routes>
         </div>

@@ -7,7 +7,9 @@ const Thumbnail = ({ data, type }) => {
     <div className={styles.thumbnail}>
       <div className={styles.thumbnail_image}>
         <img
-          src={`https://www.themoviedb.org/t/p/w342/${data.backdrop_path}`}
+          src={`https://www.themoviedb.org/t/p/w342/${
+            data.backdrop_path ? data.backdrop_path : data.poster_path
+          }`}
         />
         <span className={styles.redirect_button}>
           <img className={styles.arrow} src="/src/assets/icon-play.svg" />

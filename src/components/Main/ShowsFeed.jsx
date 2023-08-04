@@ -6,20 +6,23 @@ import Loading from "../Helper/Loading";
 import Error from "../../NotFound";
 
 // Exibe uma página de filmes ou séries. Recebe como parâmetros a página, a função que retorna o url para a requisição e o tipo de show (filme ou série).
-const ShowsFeed = ({ page, api, type }) => {
+const ShowsFeed = ({ page, api, type, params }) => {
   const { error, loading, data, request } = useFetch();
+  console.log(params);
 
   // Ao entrar na página, um request será feito e atualizara os dados dos filmes.
   React.useEffect(() => {
     async function fetchMovies() {
-      const { url } = api(page, 1000);
+      const { url } = api(...params);
       // Ao chamar o request, data é atualizado com o resultado da requisição.
       request(url);
+      console.log(url);
     }
 
     fetchMovies();
-  }, [request, page, api]);
+  }, [request, page, api, params]);
 
+  console.log(data);
   if (loading) return <Loading />;
   if (error) return <Error />;
   if (data)

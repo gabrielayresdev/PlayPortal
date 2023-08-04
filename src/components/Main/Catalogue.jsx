@@ -59,6 +59,7 @@ const Catalogue = ({ content, slideApi, catalogueApi }) => {
                   page={page}
                   api={catalogueApi}
                   type={content.type}
+                  params={[page, 1000]}
                 />
               );
             })}

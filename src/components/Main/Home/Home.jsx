@@ -97,6 +97,7 @@ const Home = () => {
                 page={page}
                 api={buscaPrincipaisFilmes}
                 type="Filme"
+                params={[page, 1000]}
               />
             );
           })}

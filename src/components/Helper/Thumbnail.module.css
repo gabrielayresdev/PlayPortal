@@ -9,11 +9,22 @@
 .thumbnail_image {
   border-radius: 10px;
   width: 100%;
+  aspect-ratio: 16/9;
+
+  overflow: hidden;
+
   position: relative;
 
   cursor: pointer;
 
   transition: 0.3s all;
+}
+
+.thumbnail_image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center 10px;
 }
 
 .thumbnail_image:hover > img {
