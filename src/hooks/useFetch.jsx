@@ -1,5 +1,6 @@
 import React from "react";
 
+// customHook para realizar requisições a APIs
 const useFetch = () => {
   const [error, setError] = React.useState(null);
   const [data, setData] = React.useState(null);
@@ -24,7 +25,6 @@ const useFetch = () => {
     } finally {
       setLoading(false);
       setData(json);
-      return { json, response };
     }
   }, []);
 

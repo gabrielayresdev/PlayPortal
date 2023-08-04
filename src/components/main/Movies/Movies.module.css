@@ -1,0 +1,13 @@
+.title {
+  font-weight: 300;
+  font-size: 2rem;
+}
+
+.button_container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  width: 100%;
+  margin-top: 3rem;
+}

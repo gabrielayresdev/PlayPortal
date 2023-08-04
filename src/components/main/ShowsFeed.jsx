@@ -4,21 +4,22 @@ import Thumbnail from "../Helper/Thumbnail";
 import useFetch from "../../hooks/useFetch";
 import Loading from "../Helper/Loading";
 import Error from "../../NotFound";
-import { buscaPrincipaisFilmes } from "../../Api";
 
-const ShowsFeed = ({ page }) => {
+// Exibe uma página de filmes ou séries. Recebe como parâmetros a página, a função que retorna o url para a requisição e o tipo de show (filme ou série).
+const ShowsFeed = ({ page, api, type }) => {
   const { error, loading, data, request } = useFetch();
 
+  // Ao entrar na página, um request será feito e atualizara os dados dos filmes.
   React.useEffect(() => {
     async function fetchMovies() {
-      const { url } = buscaPrincipaisFilmes(page, 1000);
+      const { url } = api(page, 1000);
+      // Ao chamar o request, data é atualizado com o resultado da requisição.
       request(url);
     }
 
     fetchMovies();
-  }, [request, page]);
+  }, [request, page, api]);
 
-  console.log(loading);
   if (loading) return <Loading />;
   if (error) return <Error />;
   if (data)
@@ -26,7 +27,7 @@ const ShowsFeed = ({ page }) => {
       <div>
         <div className={styles.main}>
           {data.results.map((item, index) => {
-            return <Thumbnail key={index} data={item} type={"movie"} />;
+            return <Thumbnail key={index} data={item} type={type} />;
           })}
         </div>
       </div>

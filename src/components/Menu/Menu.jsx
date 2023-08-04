@@ -1,6 +1,7 @@
 import { NavLink } from "react-router-dom";
 import styles from "./Menu.module.css";
 
+// Menu lateral com os links para as seções home, filmes e séries.
 const Menu = () => {
   return (
     <div className={styles.menu}>

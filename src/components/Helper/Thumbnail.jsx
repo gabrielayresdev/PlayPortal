@@ -1,12 +1,13 @@
-import Format from "../../Classes/Format";
+import Format from "../../classes/Format";
 import styles from "./Thumbnail.module.css";
 
+// Thumbnail dos filmes e séries. Deve receber como parâmetro um objeto com os dados do show e o tipo(filme ou séries)
 const Thumbnail = ({ data, type }) => {
   return (
     <div className={styles.thumbnail}>
       <div className={styles.thumbnail_image}>
         <img
-          src={`https://www.themoviedb.org/t/p/original${data.backdrop_path}`}
+          src={`https://www.themoviedb.org/t/p/w342/${data.backdrop_path}`}
         />
         <span className={styles.redirect_button}>
           <img className={styles.arrow} src="./src/assets/icon-play.svg" />
@@ -24,14 +25,18 @@ const Thumbnail = ({ data, type }) => {
         </svg>
       </span>
       <div className={styles.info}>
-        <p>{Format.getYear(data.release_date)}</p>
-        {type === "movie" ? (
+        <p>
+          {Format.getYear(
+            data.release_date ? data.release_date : data.first_air_date
+          )}
+        </p>
+        {type === "Filme" ? (
           <span>
-            <img src="./src/assets/icon-nav-movies.svg" /> Movie
+            <img src="./src/assets/icon-nav-movies.svg" /> Filme
           </span>
         ) : (
           <span>
-            <img src="./src/assets/icon-nav-tv-series.svg" /> Movie
+            <img src="./src/assets/icon-nav-tv-series.svg" /> Série
           </span>
         )}
         <span>
@@ -40,7 +45,7 @@ const Thumbnail = ({ data, type }) => {
         </span>
       </div>
 
-      <p className={styles.title}>{data.title}</p>
+      <p className={styles.title}>{data.title ? data.title : data.name}</p>
     </div>
   );
 };

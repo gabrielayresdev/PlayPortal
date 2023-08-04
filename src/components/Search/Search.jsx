@@ -1,5 +1,6 @@
 import styles from "./Search.module.css";
 
+// Barra de busca de shows.
 const Search = () => {
   return (
     <form className={styles.search}>

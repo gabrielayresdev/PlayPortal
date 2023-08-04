@@ -12,6 +12,7 @@ function App() {
   return (
     <div className={styles.app}>
       <BrowserRouter>
+        {/* Menu e Search deve permanecer em todas as rotas */}
         <Menu />
         <Search />
         <div className={styles.appMain}>

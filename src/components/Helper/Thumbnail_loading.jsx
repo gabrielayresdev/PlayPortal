@@ -1,5 +1,6 @@
 import styles from "./Thumbnail_loading.module.css";
 
+// Skeleton de Loading das thumbnails dos filmes e séries.
 const Thumbnail_loading = () => {
   return (
     <div className={styles.loading_thumbnail}>
