@@ -10,7 +10,7 @@ const Thumbnail = ({ data, type }) => {
           src={`https://www.themoviedb.org/t/p/w342/${data.backdrop_path}`}
         />
         <span className={styles.redirect_button}>
-          <img className={styles.arrow} src="./src/assets/icon-play.svg" />
+          <img className={styles.arrow} src="/src/assets/icon-play.svg" />
           Detalhes
         </span>
       </div>
@@ -32,15 +32,15 @@ const Thumbnail = ({ data, type }) => {
         </p>
         {type === "Filme" ? (
           <span>
-            <img src="./src/assets/icon-nav-movies.svg" /> Filme
+            <img src="/src/assets/icon-nav-movies.svg" /> Filme
           </span>
         ) : (
           <span>
-            <img src="./src/assets/icon-nav-tv-series.svg" /> Série
+            <img src="/src/assets/icon-nav-tv-series.svg" /> Série
           </span>
         )}
         <span>
-          <img src="./src/assets/star-solid.svg" />
+          <img src="/src/assets/star-solid.svg" />
           {data.vote_average}
         </span>
       </div>

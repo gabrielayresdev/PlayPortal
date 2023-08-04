@@ -6,21 +6,18 @@ const Menu = () => {
   return (
     <div className={styles.menu}>
       <i>
-        <img src="./src/assets/logo.svg" alt="Logo da PlayPortal" />
+        <img src="/src/assets/logo.svg" alt="Logo da PlayPortal" />
       </i>
       <nav className={styles.nav}>
         <NavLink to={"/"} end>
           <i>
-            <img
-              src="./src/assets/icon-nav-home.svg"
-              alt="Logo da PlayPortal"
-            />
+            <img src="/src/assets/icon-nav-home.svg" alt="Logo da PlayPortal" />
           </i>
         </NavLink>
         <NavLink to={"/movies"}>
           <i>
             <img
-              src="./src/assets/icon-nav-movies.svg"
+              src="/src/assets/icon-nav-movies.svg"
               alt="Navegar para seção de filmes"
             />
           </i>
@@ -28,7 +25,7 @@ const Menu = () => {
         <NavLink to={"/tv"}>
           <i>
             <img
-              src="./src/assets/icon-nav-tv-series.svg"
+              src="/src/assets/icon-nav-tv-series.svg"
               alt="Navegar para seção séries"
             />
           </i>
@@ -36,14 +33,14 @@ const Menu = () => {
         <NavLink to={"/bookmark"}>
           <i>
             <img
-              src="./src/assets/icon-nav-bookmark.svg"
+              src="/src/assets/icon-nav-bookmark.svg"
               alt="Navegar para seção salvos"
             />
           </i>
         </NavLink>
       </nav>
       <div className={styles.profile}>
-        <img src="./src/assets/image-avatar.png" alt="Foto de perfil" />
+        <img src="/src/assets/image-avatar.png" alt="Foto de perfil" />
       </div>
     </div>
   );
