@@ -2,7 +2,7 @@ import React from "react";
 import styles from "./Home.module.css";
 import Button from "../../Helper/Button";
 import ShowsFeed from "../ShowsFeed";
-import { buscaPrincipaisFilmes } from "../../../Api";
+import { buscaPrincipaisFilmes } from "/src/api.jsx";
 
 // Homepage do site
 const Home = () => {
