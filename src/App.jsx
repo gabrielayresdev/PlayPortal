@@ -1,12 +1,12 @@
 import { BrowserRouter, Route, Routes } from "react-router-dom";
-import Menu from "./components/Menu";
-import Home from "./components/main/Home";
+import Menu from "./components/Menu/Menu";
+import Home from "./components/Main/Home/Home";
 import styles from "./App.module.css";
-import Search from "./components/Search";
-import Movies from "./components/main/Movies";
-import TvSeries from "./components/main/TvSeries";
-import Bookmark from "./components/main/Bookmark";
-import Error from "./components/Error";
+import Search from "./components/Search/Search";
+import Movies from "./components/Main/Movies/Movies";
+import TvSeries from "./components/Main/Tv/TvSeries";
+import Bookmark from "./components/Main/Bookmark/Bookmark";
+import NotFound from "./NotFound";
 
 function App() {
   return (
@@ -20,7 +20,7 @@ function App() {
             <Route path="movies" element={<Movies />} />
             <Route path="tv" element={<TvSeries />} />
             <Route path="bookmark" element={<Bookmark />} />
-            <Route path="*" element={<Error />} />
+            <Route path="*" element={<NotFound />} />
           </Routes>
         </div>
       </BrowserRouter>

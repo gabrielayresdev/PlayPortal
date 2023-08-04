@@ -1,9 +1,9 @@
 import React from "react";
 import styles from "./ShowsFeed.module.css";
-import Thumbnail from "./Thumbnail";
+import Thumbnail from "../Helper/Thumbnail";
 import useFetch from "../../hooks/useFetch";
-import Loading from "./Loading";
-import Error from "../Error";
+import Loading from "../Helper/Loading";
+import Error from "../../NotFound";
 import { buscaPrincipaisFilmes } from "../../Api";
 
 const ShowsFeed = ({ page }) => {

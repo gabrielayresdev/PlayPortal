@@ -1,7 +1,7 @@
 import React from "react";
 import styles from "./Home.module.css";
-import Button from "../Button";
-import ShowsFeed from "./ShowsFeed";
+import Button from "../../Helper/Button";
+import ShowsFeed from "../ShowsFeed";
 
 const Home = () => {
   const [pages, setPages] = React.useState([1]);
