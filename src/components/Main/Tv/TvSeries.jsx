@@ -2,7 +2,7 @@ import React from "react";
 import styles from "./TvSeries.module.css";
 import Button from "../../Helper/Button";
 import ShowsFeed from "../ShowsFeed";
-import { buscaSeriesPopulares } from "../../../Api";
+import { buscaSeriesPopulares } from "/src/api.jsx";
 
 const Movies = () => {
   const [pages, setPages] = React.useState([1]);
