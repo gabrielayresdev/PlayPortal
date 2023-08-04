@@ -10,7 +10,6 @@ const Loading = () => {
   return (
     <div className={styles.main}>
       {numeros.map((index) => {
-        console.log(index);
         return <Thumbnail_loading key={index} />;
       })}
     </div>

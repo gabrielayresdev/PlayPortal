@@ -1,0 +1,97 @@
+.item {
+  max-width: 342px;
+
+  position: relative;
+}
+
+.slide_image {
+  border-radius: 4px;
+  width: 100%;
+  position: relative;
+
+  cursor: pointer;
+
+  transition: 0.3s all;
+}
+
+.slide_image:hover {
+  opacity: 0.8;
+}
+
+.bookmark {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 12%;
+  aspect-ratio: 1/1;
+
+  background-color: #97979799;
+  border-radius: 50%;
+
+  position: absolute;
+  right: 1rem;
+  top: 0.5rem;
+
+  cursor: pointer;
+
+  transition: all 0.5s;
+}
+
+.bookmark:hover {
+  background-color: #fff;
+}
+
+.bookmark:hover svg path {
+  transition: all 0.5s;
+  stroke: #000;
+}
+
+.text_container {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+
+  position: absolute;
+  bottom: 1rem;
+  left: 1rem;
+}
+
+.info {
+  display: flex;
+  align-items: center;
+
+  font-size: 13px;
+  font-weight: 300;
+  color: #ddd;
+
+  gap: 1rem;
+}
+
+.info span {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+
+  position: relative;
+}
+
+.info span::before {
+  content: "";
+  width: 2px;
+  height: 2px;
+  border-radius: 50%;
+  display: block;
+  background-color: #ddd;
+
+  position: absolute;
+  left: -0.5rem;
+}
+
+.info img {
+  max-width: 12px;
+}
+
+.title {
+  font-size: 18px;
+  font-weight: 500;
+}

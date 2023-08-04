@@ -1,0 +1,40 @@
+.carousel {
+  width: 100%;
+  overflow: hidden;
+
+  position: relative;
+}
+
+.boxShadow {
+  height: 100%;
+  width: 10%;
+
+  background: linear-gradient(
+    90deg,
+    transparent 0%,
+    #57575757 70%,
+    rgba(0, 0, 0, 1) 100%
+  );
+
+  position: absolute;
+  right: 0;
+  top: 0;
+
+  z-index: 1;
+}
+
+.title {
+  font-weight: 300;
+  font-size: 2rem;
+
+  margin: 1rem 0 2rem;
+}
+
+.button_container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  width: 100%;
+  margin-top: 3rem;
+}
