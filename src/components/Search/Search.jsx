@@ -9,7 +9,7 @@ const Search = () => {
   function handleSubmit(event) {
     event.preventDefault();
 
-    navigate(`search/${value}`);
+    navigate(`/search/${value}`);
   }
   return (
     <form className={styles.search} onSubmit={handleSubmit}>

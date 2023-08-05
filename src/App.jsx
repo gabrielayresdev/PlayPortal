@@ -61,7 +61,7 @@ function App() {
             />
             <Route path="/bookmark" element={<Bookmark />} />
             <Route path="/search/:nome" element={<SearchResults />} />
-            <Route path="*" element={<NotFound />} />
+            <Route path="/*" element={<NotFound />} />
           </Routes>
         </div>
       </BrowserRouter>
