@@ -35,8 +35,8 @@ function App() {
       <BrowserRouter>
         {/* Menu e Search deve permanecer em todas as rotas */}
         <Menu />
-        <Search />
         <div className={styles.appMain}>
+          <Search />
           <Routes>
             <Route path="/" element={<Home />} />
             <Route

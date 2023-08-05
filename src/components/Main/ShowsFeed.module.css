@@ -19,11 +19,15 @@
 @media screen and (max-width: 1024px) {
   .main {
     grid-template-columns: repeat(3, 1fr);
+    width: 95%;
+    margin: 0 auto;
   }
 }
 
 @media screen and (max-width: 768px) {
   .main {
     grid-template-columns: repeat(2, 1fr);
+    width: 95%;
+    margin: 0 auto;
   }
 }

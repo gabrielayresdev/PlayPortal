@@ -21,3 +21,12 @@
 
   width: 100%;
 }
+
+@media (max-width: 1024px) {
+  .search {
+    width: 95vw;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 2rem;
+  }
+}

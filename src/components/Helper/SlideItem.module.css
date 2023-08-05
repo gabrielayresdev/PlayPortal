@@ -4,6 +4,12 @@
   position: relative;
 }
 
+@media (max-width: 768px) {
+  .item {
+    max-width: 200px;
+  }
+}
+
 .slide_image {
   border-radius: 4px;
   width: 100%;

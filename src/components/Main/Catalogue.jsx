@@ -22,6 +22,45 @@ const Catalogue = ({ content, slideApi, catalogueApi }) => {
     fetchMovies();
   }, [request, catalogueApi]);
 
+  React.useEffect(() => {
+    function handleResize() {
+      if (window.innerWidth < 1700) {
+        setSlidesPerView(3.7);
+      }
+      if (window.innerWidth < 1500) {
+        setSlidesPerView(3.2);
+      }
+
+      if (window.innerWidth < 1300) {
+        setSlidesPerView(2.4);
+      }
+
+      if (window.innerWidth < 1000) {
+        setSlidesPerView(2.2);
+      }
+
+      if (window.innerWidth < 768) {
+        setSlidesPerView(2.7);
+      }
+
+      if (window.innerWidth < 648) {
+        setSlidesPerView(1.4);
+      }
+
+      if (window.innerWidth < 500) {
+        setSlidesPerView(1.1);
+      }
+    }
+
+    handleResize();
+
+    window.addEventListener("resize", handleResize);
+
+    return () => {
+      window.removeEventListener("resize", handleResize);
+    };
+  });
+
   return (
     <div>
       <>

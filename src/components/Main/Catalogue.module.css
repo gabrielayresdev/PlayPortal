@@ -30,6 +30,12 @@
   margin: 1rem 0 2rem;
 }
 
+@media (max-width: 1024px) {
+  .title {
+    margin: 1rem 0 1rem 1rem;
+  }
+}
+
 .button_container {
   display: flex;
   align-items: center;
