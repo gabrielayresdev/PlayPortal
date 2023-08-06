@@ -48,7 +48,7 @@ const Catalogue = ({ content, slideApi, catalogueApi }) => {
       }
 
       if (window.innerWidth < 500) {
-        setSlidesPerView(1.1);
+        setSlidesPerView(1.5);
       }
     }
 
@@ -68,11 +68,7 @@ const Catalogue = ({ content, slideApi, catalogueApi }) => {
           <>
             <h1 className={styles.title}>Em cartaz</h1>
             <div className={styles.carousel}>
-              <Swiper
-                slidesPerView={slidesPerView}
-                pagination={{ clickable: true }}
-                navigation
-              >
+              <Swiper slidesPerView={slidesPerView} navigation>
                 {data.results.map((movie) => {
                   return (
                     <SwiperSlide key={movie.id}>

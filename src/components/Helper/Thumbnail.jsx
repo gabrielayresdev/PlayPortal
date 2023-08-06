@@ -3,6 +3,7 @@ import styles from "./Thumbnail.module.css";
 
 // Thumbnail dos filmes e séries. Deve receber como parâmetro um objeto com os dados do show e o tipo(filme ou séries)
 const Thumbnail = ({ data, type }) => {
+  console.log(data);
   return (
     <div className={styles.thumbnail}>
       <div className={styles.thumbnail_image}>

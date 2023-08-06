@@ -13,6 +13,7 @@ import {
 } from "./api";
 import Catalogue from "./components/Main/Catalogue";
 import SearchResults from "./components/Main/SearchResults";
+import { GlobalStorage } from "./GlobalContext";
 
 const content = {
   movies: {
@@ -37,32 +38,34 @@ function App() {
         <Menu />
         <Search />
         <div className={styles.appMain}>
-          <Routes>
-            <Route path="/" element={<Home />} />
-            <Route
-              path="/movies"
-              element={
-                <Catalogue
-                  content={content.movies}
-                  catalogueApi={content.movies.catalogueApi}
-                  slideApi={content.movies.slideApi}
-                />
-              }
-            />
-            <Route
-              path="/tv"
-              element={
-                <Catalogue
-                  content={content.tv}
-                  catalogueApi={content.tv.catalogueApi}
-                  slideApi={content.tv.slideApi}
-                />
-              }
-            />
-            <Route path="/bookmark" element={<Bookmark />} />
-            <Route path="/search/:nome" element={<SearchResults />} />
-            <Route path="/*" element={<NotFound />} />
-          </Routes>
+          <GlobalStorage>
+            <Routes>
+              <Route path="/" element={<Home />} />
+              <Route
+                path="/movies"
+                element={
+                  <Catalogue
+                    content={content.movies}
+                    catalogueApi={content.movies.catalogueApi}
+                    slideApi={content.movies.slideApi}
+                  />
+                }
+              />
+              <Route
+                path="/tv"
+                element={
+                  <Catalogue
+                    content={content.tv}
+                    catalogueApi={content.tv.catalogueApi}
+                    slideApi={content.tv.slideApi}
+                  />
+                }
+              />
+              <Route path="/bookmark" element={<Bookmark />} />
+              <Route path="/search/:nome" element={<SearchResults />} />
+              <Route path="/*" element={<NotFound />} />
+            </Routes>
+          </GlobalStorage>
         </div>
       </BrowserRouter>
     </div>
