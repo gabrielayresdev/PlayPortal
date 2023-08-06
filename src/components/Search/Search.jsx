@@ -6,10 +6,11 @@ import styles from "./Search.module.css";
 const Search = () => {
   const [value, setValue] = React.useState("");
   const navigate = useNavigate();
+
   function handleSubmit(event) {
     event.preventDefault();
 
-    navigate(`/search/${value}`);
+    value ? navigate(`/search/${value}`) : navigate(``);
   }
   return (
     <form className={styles.search} onSubmit={handleSubmit}>

@@ -1,0 +1,46 @@
+.item {
+  position: relative;
+}
+
+.slide_image {
+  height: 500px;
+  object-fit: cover;
+  object-position: top 4rem;
+  padding-right: 2rem;
+}
+
+.title {
+  position: absolute;
+  bottom: 3rem;
+  left: 2rem;
+
+  font-size: 4rem;
+  font-weight: 700;
+  color: #fff;
+  font-family: "Outfit", sans-serif;
+
+  z-index: 10;
+}
+
+.boxShadow {
+  height: 100%;
+  width: 100%;
+
+  background: linear-gradient(-45deg, transparent 0%, #10141e 100%);
+
+  position: absolute;
+  right: 0;
+  bottom: 0;
+
+  z-index: 1;
+}
+@media (max-width: 1024px) {
+  .slide_image {
+    height: 250px;
+    padding: 0;
+  }
+
+  .title {
+    font-size: 2rem;
+  }
+}

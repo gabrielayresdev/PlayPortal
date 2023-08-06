@@ -1,22 +1,21 @@
 import React from "react";
 import styles from "./Home.module.css";
-import Button from "../../Helper/Button";
-import ShowsFeed from "../ShowsFeed";
-import { buscaPrincipaisFilmes } from "/src/api.jsx";
 import { buscaFilmesEmLancamento } from "../../../api";
 import useFetch from "../../../hooks/useFetch";
-// Swiper
 import { Swiper, SwiperSlide } from "swiper/react";
 
 import { register } from "swiper/element/bundle";
 import "swiper/css";
-import SlideItem from "../../Helper/SlideItem";
+import SliderHome from "./SliderHome";
 register();
+
+import "swiper/css";
+import "swiper/css/pagination";
+import SlideItem from "../../Helper/SlideItem";
 
 // Homepage do site
 const Home = () => {
-  const [pages, setPages] = React.useState([1]);
-  const { error, loading, data, request } = useFetch();
+  const { data, request } = useFetch();
   const [slidesPerView, setSlidesPerView] = React.useState(4.3);
 
   // Ao entrar na página, um request será feito e atualizara os dados dos filmes.
@@ -28,7 +27,7 @@ const Home = () => {
     }
 
     fetchMovies();
-  }, [request, buscaFilmesEmLancamento]);
+  }, [request]);
 
   React.useEffect(() => {
     function handleResize() {
@@ -44,7 +43,11 @@ const Home = () => {
       }
 
       if (window.innerWidth < 1000) {
-        setSlidesPerView(1.7);
+        setSlidesPerView(2.2);
+      }
+
+      if (window.innerWidth < 768) {
+        setSlidesPerView(2.7);
       }
 
       if (window.innerWidth < 648) {
@@ -69,15 +72,11 @@ const Home = () => {
     <>
       {data ? (
         <div className={styles.carousel}>
-          <Swiper
-            slidesPerView={slidesPerView}
-            pagination={{ clickable: true }}
-            navigation
-          >
+          <Swiper slidesPerView={1} pagination={{ clickable: true }} navigation>
             {data.results.map((movie) => {
               return (
                 <SwiperSlide key={movie.id}>
-                  <SlideItem data={movie} type={"FIlme"} />
+                  <SliderHome data={movie} />
                 </SwiperSlide>
               );
             })}
@@ -85,31 +84,29 @@ const Home = () => {
         </div>
       ) : null}
 
-      <div>
-        <h1 className={styles.title}>Mais bem avaliados</h1>
+      <div className={styles.text}>
+        <h1 className={styles.logo}>
+          <span className={styles.red}>Play</span>Portal
+        </h1>
+        <h2 className={styles.title}>A melhor plataforma para fãs de cinema</h2>
+      </div>
 
-        {/* Utilizar Componentes com os filmes permite que ao apertar o botão carregar mais, os filmes já carregados não sejam recarregados. */}
-        <div>
-          {pages.map((page) => {
-            return (
-              <ShowsFeed
-                key={page}
-                page={page}
-                api={buscaPrincipaisFilmes}
-                type="Filme"
-                params={[page, 1000]}
-              />
-            );
-          })}
-        </div>
-      </div>
-      <div className={styles.button_container}>
-        <Button
-          handleClick={() => setPages((page) => [...page, page.length + 1])}
-        >
-          Carregar mais
-        </Button>
-      </div>
+      {data ? (
+        <>
+          <div className={styles.carousel}>
+            <Swiper slidesPerView={slidesPerView} navigation>
+              {data.results.map((movie) => {
+                return (
+                  <SwiperSlide key={movie.id}>
+                    <SlideItem data={movie} type={"FIlme"} />
+                  </SwiperSlide>
+                );
+              })}
+            </Swiper>
+            <div className={styles.boxShadow}></div>
+          </div>
+        </>
+      ) : null}
     </>
   );
 };

@@ -20,7 +20,7 @@
   transition: 0.3s all;
 }
 
-.thumbnail_image img {
+.thumbnail_image > img {
   width: 100%;
   height: 100%;
   object-fit: cover;
@@ -72,7 +72,7 @@
 
   position: absolute;
   right: 1rem;
-  top: 0.5rem;
+  top: 1rem;
 
   cursor: pointer;
 
