@@ -10,12 +10,20 @@ const Bookmark = () => {
   React.useEffect(() => {
     async function requestAll(global) {
       let responses = [];
-      for (let i = 0; i < global.bookmarks.length; i++) {
-        const response = fetch(
-          `https://api.themoviedb.org/3/tv/${global.bookmarks[i]}?api_key=03de48f66303824c443b36741744feac&lang=pt-BR`
+      for (let i = 0; i < global.bookmarks.series.length; i++) {
+        const tv = fetch(
+          `https://api.themoviedb.org/3/tv/${global.bookmarks.series[i]}?api_key=03de48f66303824c443b36741744feac&lang=pt-BR`
         ).then((r) => r.json());
 
-        responses.push(response);
+        responses.push(tv);
+      }
+
+      for (let i = 0; i < global.bookmarks.filmes.length; i++) {
+        const movies = fetch(
+          `https://api.themoviedb.org/3/movie/${global.bookmarks.filmes[i]}?api_key=03de48f66303824c443b36741744feac&lang=pt-BR`
+        ).then((r) => r.json());
+
+        responses.push(movies);
       }
 
       const results = await Promise.all(responses);
@@ -29,8 +37,13 @@ const Bookmark = () => {
     return (
       <div className={styles.main}>
         {data.map((item) => {
-          console.log(item.backdrop_path);
-          return <Thumbnail key={item.id} data={item} type="Filme" />;
+          return (
+            <Thumbnail
+              key={item.id}
+              data={item}
+              type={item.last_episode_to_air ? "serie" : "filme"}
+            />
+          );
         })}
       </div>
     );

@@ -72,7 +72,7 @@ const Catalogue = ({ content, slideApi, catalogueApi }) => {
                 {data.results.map((movie) => {
                   return (
                     <SwiperSlide key={movie.id}>
-                      <SlideItem data={movie} type={"FIlme"} />
+                      <SlideItem data={movie} type={content.type} />
                     </SwiperSlide>
                   );
                 })}

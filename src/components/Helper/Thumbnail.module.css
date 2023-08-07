@@ -79,6 +79,10 @@
   transition: all 0.5s;
 }
 
+.bookmark.active svg path {
+  fill: #fff;
+}
+
 .bookmark:hover {
   background-color: #fff;
 }
@@ -86,6 +90,7 @@
 .bookmark:hover svg path {
   transition: all 0.5s;
   stroke: #000;
+  fill: none;
 }
 
 .info {

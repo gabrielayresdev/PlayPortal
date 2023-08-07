@@ -1,14 +1,43 @@
 import styles from "./SlideItem.module.css";
 import Format from "../../classes/Format";
+import { GlobalContext } from "../../GlobalContext";
+import React from "react";
 
 const SlideItem = ({ data, type }) => {
+  const global = React.useContext(GlobalContext);
+  const [fav, setFav] = React.useState(() => {
+    console.log(global);
+    console.log("" + data.id);
+    console.log(global.bookmarks[`${type}s`].includes("" + data.id));
+    return global.bookmarks[`${type}s`].includes("" + data.id);
+  });
+
+  function handleBookmark() {
+    if (fav) {
+      setFav(false);
+      const aux = global.bookmarks[`${type}s`];
+      const index = aux.indexOf(data.id + "");
+      aux.splice(index, 1);
+      localStorage.setItem(type, aux);
+    } else {
+      setFav(true);
+      global.bookmarks[`${type}s`].push("" + data.id);
+      console.log(global);
+
+      localStorage.setItem(type, global.bookmarks[`${type}s`]);
+    }
+  }
+
   return (
     <div className={styles.item}>
       <img
         className={styles.slide_image}
         src={`https://www.themoviedb.org/t/p/w342/${data.backdrop_path}`}
       />
-      <span className={styles.bookmark}>
+      <span
+        className={`${styles.bookmark} ${fav ? styles.active : ""}`}
+        onClick={handleBookmark}
+      >
         <svg width="12" height="14" xmlns="http://www.w3.org/2000/svg">
           <path
             d="m10.518.75.399 12.214-5.084-4.24-4.535 4.426L.75 1.036l9.768-.285Z"
@@ -25,7 +54,7 @@ const SlideItem = ({ data, type }) => {
               data.release_date ? data.release_date : data.first_air_date
             )}
           </p>
-          {type === "Filme" ? (
+          {type === "filme" ? (
             <span>
               <img src="src/assets/icon-nav-movies.svg" /> Filme
             </span>

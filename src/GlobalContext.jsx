@@ -4,8 +4,20 @@ export const GlobalContext = React.createContext();
 
 export const GlobalStorage = ({ children }) => {
   const [bookmarks, setBookmarks] = React.useState(() => {
-    const fav = localStorage.getItem("bookmarks");
-    return fav ? fav : [57243, 456, 30984, 44006];
+    const filmes = localStorage.getItem("filme");
+    const tv = localStorage.getItem("serie");
+    if (filmes || tv) {
+      const filmesArray = filmes ? filmes.split(",") : [];
+      const seriesArray = tv ? tv.split(",") : [];
+      const fav = {};
+      fav.filmes = filmesArray;
+      fav.series = seriesArray;
+
+      console.log(fav);
+      return fav;
+    } else {
+      return { filmes: [], series: [] };
+    }
   });
 
   return (

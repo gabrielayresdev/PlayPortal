@@ -18,13 +18,13 @@ import { GlobalStorage } from "./GlobalContext";
 const content = {
   movies: {
     title: "Filmes mais populares",
-    type: "Filme",
+    type: "filme",
     slideApi: buscaFilmesEmLancamento,
     catalogueApi: buscaFilmesPopulares,
   },
   tv: {
     title: "Séries mais populares",
-    type: "Série",
+    type: "serie",
     slideApi: buscaSeriesEmLancamento,
     catalogueApi: buscaSeriesPopulares,
   },
