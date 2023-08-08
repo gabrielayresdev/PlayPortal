@@ -1,7 +1,41 @@
 # PlayPortal
 
-> Em desenvolvimento
+O PlayPortal é um website desenvolvido com React que utiliza a API do TMDb para exibir os principais filmes e séries. Os usuários podem visualizar informações detalhadas sobre os programas, conferir os shows em lançamento, descobrir quais filmes e séries estão mais populares e salvar seus programas favoritos. Além disso, oferece um carrossel com os filmes em cartaz, proporcionando uma experiência dinâmica. O projeto foi concebido com o objetivo de aplicar os conhecimentos adquiridos em React e proporcionar aos usuários uma plataforma prática e intuitiva para explorar o mundo do entretenimento online.
 
-O PlayPortal é um website desenvolvido com React, que utiliza a API do TMDb para exibir os principais filmes e séries. Os usuários podem visualizar informações detalhadas, assistir trailers e salvar seus filmes favoritos para assistir depois. Além disso, há um carrossel com os filmes mais populares do momento, proporcionando uma experiência dinâmica e envolvente. O projeto foi criado com o objetivo de aplicar os conhecimentos adquiridos em React e oferecer aos usuários uma plataforma prática e intuitiva para explorar e desfrutar do mundo do entretenimento online.
+![Site em funcionamento](./src/Assets/readme_midia/PlayPortal.gif)
 
-Deploy:
+## Tecnologias
+
+Essas foram as tecnologias usadas no projeto:
+
+- React
+- JavaScript
+- HTML5
+- CSS3
+
+## Aprendizado
+
+Com o desenvolvimento desse projeto, pude colocar em prática conceitos essenciais do desenvolvimento em React, como estado, componentes, hooks e como utilizar a biblioteca React Router Dom para criar Single Page Applications.
+
+## Features
+
+- Exibir filmes e séries em cartaz
+- Exibir filmes e séries mais populares no momento
+- Busca pelo nome do filme
+- Visualizar dados avançados do filme
+- Salvar filmes como favoritos
+- Carousel com filmes e séries em cartaz
+
+## Layout
+
+![](./src/Assets/readme_midia/desktop.png)
+![](./src/Assets/readme_midia/desktop2.png)
+![](./src/Assets/readme_midia/tablet.png)
+![](./src/Assets/readme_midia/tablet2.png)
+![](./src/Assets/readme_midia/mobile.png)
+
+## Links
+
+- LinkedIn: https://www.linkedin.com/in/gabrielayresdev/
+- Repositório: https://github.com/gabrielayresdev/PlayPortal
+  - Caso encontre algum bug e deseje reportar, favor, enviar email para gabriel.ar.fort@gmail.com
