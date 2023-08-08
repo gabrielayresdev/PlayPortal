@@ -1,0 +1,92 @@
+.movie {
+  width: 100%;
+  height: 100%;
+
+  display: grid;
+  grid-template-columns: 1fr 3fr;
+  gap: 3rem;
+}
+
+.info {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+}
+
+.vote {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 1rem;
+}
+
+.vote p {
+  width: 2ch;
+  font-size: 1.25rem;
+}
+
+.title {
+  font-size: 5rem;
+}
+
+.data {
+  display: flex;
+  gap: 1rem;
+
+  margin-top: 0.7rem;
+
+  color: #bbb;
+}
+
+.data span {
+  display: flex;
+  align-items: center;
+}
+
+.data span:first-of-type::after {
+  content: "";
+  width: 2px;
+  height: 2px;
+  display: block;
+  border-radius: 50%;
+
+  margin-left: 1rem;
+
+  background-color: #bbb;
+}
+
+.overview {
+  font-size: 1.25rem;
+  font-weight: 300;
+  width: 65ch;
+}
+
+.genres {
+  display: flex;
+  gap: 0.5rem;
+}
+
+.genre {
+  font-size: 0.875rem;
+  color: #bbb;
+
+  display: flex;
+  align-items: center;
+}
+
+.genre:first-of-type::before {
+  margin-right: 0;
+  width: 0;
+}
+
+.genre::before {
+  content: "";
+  width: 2px;
+  height: 2px;
+  display: block;
+  border-radius: 50%;
+
+  margin-right: 0.5rem;
+
+  background-color: #bbb;
+}

@@ -2,10 +2,12 @@ import React from "react";
 import { GlobalContext } from "../../GlobalContext";
 import Format from "../../classes/Format";
 import styles from "./Thumbnail.module.css";
+import { useNavigate } from "react-router-dom";
 
 // Thumbnail dos filmes e séries. Deve receber como parâmetro um objeto com os dados do show e o tipo(filme ou séries)
 const Thumbnail = ({ data, type }) => {
   const global = React.useContext(GlobalContext);
+  const navigator = useNavigate();
   const [fav, setFav] = React.useState(() => {
     console.log(global);
     console.log("" + data.id);
@@ -29,10 +31,15 @@ const Thumbnail = ({ data, type }) => {
     }
   }
 
+  function openMoviePage() {
+    navigator(`/movie/${data.id}`);
+  }
+
   return (
     <div className={styles.thumbnail}>
       <div className={styles.thumbnail_image}>
         <img
+          onClick={openMoviePage}
           src={`https://www.themoviedb.org/t/p/w342/${
             data.backdrop_path ? data.backdrop_path : data.poster_path
           }`}
