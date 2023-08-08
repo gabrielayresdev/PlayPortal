@@ -12,7 +12,6 @@ const Movie = () => {
   React.useEffect(() => {
     async function fetchData() {
       const { url } = buscaFilme(params.id);
-      console.log(url);
       request(url);
     }
 

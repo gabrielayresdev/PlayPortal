@@ -12,14 +12,12 @@ const Tv = () => {
   React.useEffect(() => {
     async function fetchData() {
       const { url } = buscaSerie(params.id);
-      console.log(url);
       request(url);
     }
 
     fetchData();
   }, [params, request]);
 
-  console.log(data);
   if (data)
     return (
       <div className={styles.movie}>

@@ -13,7 +13,6 @@ export const GlobalStorage = ({ children }) => {
       fav.filmes = filmesArray;
       fav.series = seriesArray;
 
-      console.log(fav);
       return fav;
     } else {
       return { filmes: [], series: [] };

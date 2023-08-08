@@ -9,7 +9,6 @@ class Format {
   }
 
   static formatRuntime(minutes) {
-    console.log(minutes);
     const hours = (minutes / 60).toFixed(0);
     const min = minutes % 60;
 

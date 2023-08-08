@@ -6,13 +6,9 @@ import { useNavigate } from "react-router-dom";
 
 // Thumbnail dos filmes e séries. Deve receber como parâmetro um objeto com os dados do show e o tipo(filme ou séries)
 const Thumbnail = ({ data, type }) => {
-  console.log(data);
   const global = React.useContext(GlobalContext);
   const navigator = useNavigate();
   const [fav, setFav] = React.useState(() => {
-    console.log(global);
-    console.log("" + data.id);
-    console.log(global.bookmarks[`${type}s`].includes("" + data.id));
     return global.bookmarks[`${type}s`].includes("" + data.id);
   });
 
@@ -26,7 +22,6 @@ const Thumbnail = ({ data, type }) => {
     } else {
       setFav(true);
       global.bookmarks[`${type}s`].push("" + data.id);
-      console.log(global);
 
       localStorage.setItem(type, global.bookmarks[`${type}s`]);
     }
@@ -46,7 +41,7 @@ const Thumbnail = ({ data, type }) => {
             data.backdrop_path ? data.backdrop_path : data.poster_path
           }`}
         />
-        <span className={styles.redirect_button}>
+        <span className={styles.redirect_button} onClick={openMoviePage}>
           <img className={styles.arrow} src="/src/assets/icon-play.svg" />
           Detalhes
         </span>

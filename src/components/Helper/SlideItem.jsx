@@ -2,13 +2,12 @@ import styles from "./SlideItem.module.css";
 import Format from "../../classes/Format";
 import { GlobalContext } from "../../GlobalContext";
 import React from "react";
+import { useNavigate } from "react-router-dom";
 
 const SlideItem = ({ data, type }) => {
   const global = React.useContext(GlobalContext);
+  const navigator = useNavigate();
   const [fav, setFav] = React.useState(() => {
-    console.log(global);
-    console.log("" + data.id);
-    console.log(global.bookmarks[`${type}s`].includes("" + data.id));
     return global.bookmarks[`${type}s`].includes("" + data.id);
   });
 
@@ -22,15 +21,20 @@ const SlideItem = ({ data, type }) => {
     } else {
       setFav(true);
       global.bookmarks[`${type}s`].push("" + data.id);
-      console.log(global);
 
       localStorage.setItem(type, global.bookmarks[`${type}s`]);
     }
   }
 
+  function openMoviePage() {
+    const ty = type === "filme" ? "movie" : "serie";
+    navigator(`/${ty}/${data.id}`);
+  }
+
   return (
     <div className={styles.item}>
       <img
+        onClick={openMoviePage}
         className={styles.slide_image}
         src={`https://www.themoviedb.org/t/p/w342/${data.backdrop_path}`}
       />
