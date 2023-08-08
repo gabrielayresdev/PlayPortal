@@ -63,7 +63,7 @@
 .overview {
   font-size: 1.25rem;
   font-weight: 300;
-  width: 65ch;
+  max-width: 65ch;
 }
 
 .genres {
@@ -94,4 +94,41 @@
   margin-right: 0.5rem;
 
   background-color: #bbb;
+}
+
+@media (max-width: 1024px) {
+  .movie {
+    grid-template-columns: 1fr;
+    justify-items: center;
+    gap: 3rem;
+
+    height: auto;
+  }
+  .poster {
+    width: 40%;
+    height: min-content;
+    border-radius: 4px;
+  }
+
+  .title {
+    font-size: 3rem;
+  }
+
+  .info {
+    width: 90%;
+  }
+}
+
+@media (max-width: 768px) {
+  .poster {
+    width: 50%;
+  }
+
+  .title {
+    font-size: 1.5rem;
+  }
+
+  .overview {
+    max-width: 100%;
+  }
 }

@@ -51,10 +51,10 @@ const Home = () => {
       }
 
       if (window.innerWidth < 648) {
-        setSlidesPerView(1.4);
+        setSlidesPerView(1.6);
       }
 
-      if (window.innerWidth < 500) {
+      if (window.innerWidth < 300) {
         setSlidesPerView(1.1);
       }
     }
@@ -84,29 +84,33 @@ const Home = () => {
         </div>
       ) : null}
 
-      <div className={styles.text}>
-        <h1 className={styles.logo}>
-          <span className={styles.red}>Play</span>Portal
-        </h1>
-        <h2 className={styles.title}>A melhor plataforma para fãs de cinema</h2>
-      </div>
+      <div className={styles.body}>
+        <div className={styles.text}>
+          <h1 className={styles.logo}>
+            <span className={styles.red}>Play</span>Portal
+          </h1>
+          <h2 className={styles.title}>
+            A melhor plataforma para fãs de cinema
+          </h2>
+        </div>
 
-      {data ? (
-        <>
-          <div className={styles.carousel}>
-            <Swiper slidesPerView={slidesPerView} navigation>
-              {data.results.map((movie) => {
-                return (
-                  <SwiperSlide key={movie.id}>
-                    <SlideItem data={movie} type={"filme"} />
-                  </SwiperSlide>
-                );
-              })}
-            </Swiper>
-            <div className={styles.boxShadow}></div>
-          </div>
-        </>
-      ) : null}
+        {data ? (
+          <>
+            <div className={styles.carousel}>
+              <Swiper slidesPerView={slidesPerView} navigation>
+                {data.results.map((movie) => {
+                  return (
+                    <SwiperSlide key={movie.id}>
+                      <SlideItem data={movie} type={"filme"} />
+                    </SwiperSlide>
+                  );
+                })}
+              </Swiper>
+              <div className={styles.boxShadow}></div>
+            </div>
+          </>
+        ) : null}
+      </div>
     </>
   );
 };
