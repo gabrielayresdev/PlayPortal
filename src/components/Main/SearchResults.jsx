@@ -15,6 +15,7 @@ const SearchResults = () => {
             key={page}
             page={page}
             api={buscaShowPorNome}
+            type="filme"
             params={[page, params.nome]}
           />
         );
