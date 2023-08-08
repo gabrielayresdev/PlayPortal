@@ -43,16 +43,21 @@
   align-items: center;
 }
 
-.data span:first-of-type::after {
+.data span::before {
   content: "";
   width: 2px;
   height: 2px;
   display: block;
   border-radius: 50%;
 
-  margin-left: 1rem;
+  margin-right: 1rem;
 
   background-color: #bbb;
+}
+
+.data span:first-of-type::before {
+  width: 0;
+  margin: 0;
 }
 
 .overview {

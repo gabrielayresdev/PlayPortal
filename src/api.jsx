@@ -46,3 +46,8 @@ export function buscaFilme(id) {
     url: `${API_URL}/movie/${id}?api_key=${API_KEY}&language=pt-BR`,
   };
 }
+export function buscaSerie(id) {
+  return {
+    url: `${API_URL}/tv/${id}?api_key=${API_KEY}&language=pt-BR`,
+  };
+}

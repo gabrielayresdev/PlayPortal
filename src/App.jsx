@@ -15,6 +15,7 @@ import Catalogue from "./components/Main/Catalogue";
 import SearchResults from "./components/Main/SearchResults";
 import { GlobalStorage } from "./GlobalContext";
 import Movie from "./components/Movie/Movie";
+import Tv from "./components/Movie/Tv";
 
 const content = {
   movies: {
@@ -65,6 +66,7 @@ function App() {
               <Route path="/bookmark" element={<Bookmark />} />
               <Route path="/search/:nome" element={<SearchResults />} />
               <Route path="/movie/:id" element={<Movie />} />
+              <Route path="/serie/:id" element={<Tv />} />
               <Route path="/*" element={<NotFound />} />
             </Routes>
           </GlobalStorage>

@@ -6,6 +6,7 @@ import { useNavigate } from "react-router-dom";
 
 // Thumbnail dos filmes e séries. Deve receber como parâmetro um objeto com os dados do show e o tipo(filme ou séries)
 const Thumbnail = ({ data, type }) => {
+  console.log(data);
   const global = React.useContext(GlobalContext);
   const navigator = useNavigate();
   const [fav, setFav] = React.useState(() => {
@@ -32,7 +33,8 @@ const Thumbnail = ({ data, type }) => {
   }
 
   function openMoviePage() {
-    navigator(`/movie/${data.id}`);
+    const ty = type === "filme" ? "movie" : "serie";
+    navigator(`/${ty}/${data.id}`);
   }
 
   return (
