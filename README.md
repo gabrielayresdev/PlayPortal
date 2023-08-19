@@ -2,7 +2,7 @@
 
 O PlayPortal é um website desenvolvido com React que utiliza a API do TMDb para exibir os principais filmes e séries. Os usuários podem visualizar informações detalhadas sobre os programas, conferir os shows em lançamento, descobrir quais filmes e séries estão mais populares e salvar seus programas favoritos. Além disso, oferece um carrossel com os filmes em cartaz, proporcionando uma experiência dinâmica. O projeto foi concebido com o objetivo de aplicar os conhecimentos adquiridos em React e proporcionar aos usuários uma plataforma prática e intuitiva para explorar o mundo do entretenimento online.
 
-![Site em funcionamento](./src/Assets/readme_midia/PlayPortal.gif)
+![Site em funcionamento](src/assets/readme_midia/PlayPortal.gif)
 
 ## Tecnologias
 
@@ -28,11 +28,14 @@ Com o desenvolvimento desse projeto, pude colocar em prática conceitos essencia
 
 ## Layout
 
-![](./src/Assets/readme_midia/desktop.png)
-![](./src/Assets/readme_midia/desktop2.png)
-![](./src/Assets/readme_midia/tablet.png)
-![](./src/Assets/readme_midia/tablet2.png)
-![](./src/Assets/readme_midia/mobile.png)
+### Desktop
+![](src/assets/readme_midia/desktop.png)
+![](src/assets/readme_midia/desktop2.png)
+### Tablet
+![](src/assets/readme_midia/tablet.png)
+![](src/assets/readme_midia/tablet2.png)
+### Mobile
+![](src/assets/readme_midia/mobile.png)
 
 ## Links
 
