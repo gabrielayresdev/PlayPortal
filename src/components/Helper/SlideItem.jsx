@@ -3,7 +3,7 @@ import Format from "../../classes/Format";
 import { GlobalContext } from "../../GlobalContext";
 import React from "react";
 import { useNavigate } from "react-router-dom";
-import filmeIcon from "src/assets/icon-nav-movies.svg";
+import filmeIcon from "/src/assets/icon-nav-movies.svg";
 
 const SlideItem = ({ data, type }) => {
   const global = React.useContext(GlobalContext);
