@@ -13,7 +13,7 @@ const NotFound = () => {
         para a página inicial?
       </p>
       <Link to="/" className={styles.error_button}>
-        Voltar para home <img src="./src/assets/house-solid.svg" />
+        Voltar para home <img src="/src/assets/house-solid.svg" />
       </Link>
     </div>
   );

@@ -3,6 +3,7 @@ import Format from "../../classes/Format";
 import { GlobalContext } from "../../GlobalContext";
 import React from "react";
 import { useNavigate } from "react-router-dom";
+import filmeIcon from "src/assets/icon-nav-movies.svg";
 
 const SlideItem = ({ data, type }) => {
   const global = React.useContext(GlobalContext);
@@ -60,7 +61,7 @@ const SlideItem = ({ data, type }) => {
           </p>
           {type === "filme" ? (
             <span>
-              <img src="src/assets/icon-nav-movies.svg" /> Filme
+              <img src={filmeIcon} /> Filme
             </span>
           ) : (
             <span>
