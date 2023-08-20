@@ -1,6 +1,7 @@
 import React from "react";
 import { useNavigate } from "react-router-dom";
 import styles from "./Search.module.css";
+import searchIcon from "/src/assets/icon-search.svg";
 
 // Barra de busca de shows.
 const Search = () => {
@@ -15,7 +16,7 @@ const Search = () => {
   return (
     <form className={styles.search} onSubmit={handleSubmit}>
       <label htmlFor="search" className={styles.icon}>
-        <img src="/src/assets/icon-search.svg" alt="Pesquisar" />
+        <img src={searchIcon} alt="Pesquisar" />
       </label>
       <input
         id="search"

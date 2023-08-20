@@ -3,6 +3,10 @@ import { GlobalContext } from "../../GlobalContext";
 import Format from "../../classes/Format";
 import styles from "./Thumbnail.module.css";
 import { useNavigate } from "react-router-dom";
+import movieIcon from "/src/assets/icon-nav-movies.svg";
+import tvIcon from "/src/assets/icon-nav-tv-series.svg";
+import starIcon from "/src/assets/star-solid.svg";
+import playIcon from "/src/assets/icon-play.svg";
 
 // Thumbnail dos filmes e séries. Deve receber como parâmetro um objeto com os dados do show e o tipo(filme ou séries)
 const Thumbnail = ({ data, type }) => {
@@ -42,7 +46,7 @@ const Thumbnail = ({ data, type }) => {
           }`}
         />
         <span className={styles.redirect_button} onClick={openMoviePage}>
-          <img className={styles.arrow} src="/src/assets/icon-play.svg" />
+          <img className={styles.arrow} src={playIcon} />
           Detalhes
         </span>
       </div>
@@ -67,15 +71,15 @@ const Thumbnail = ({ data, type }) => {
         </p>
         {type === "filme" ? (
           <span>
-            <img src="/src/assets/icon-nav-movies.svg" /> Filme
+            <img src={movieIcon} /> Filme
           </span>
         ) : (
           <span>
-            <img src="/src/assets/icon-nav-tv-series.svg" /> Série
+            <img src={tvIcon} /> Série
           </span>
         )}
         <span>
-          <img src="/src/assets/star-solid.svg" />
+          <img src={starIcon} />
           {data.vote_average}
         </span>
       </div>
