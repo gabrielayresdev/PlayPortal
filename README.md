@@ -2,6 +2,8 @@
 
 O PlayPortal é um website desenvolvido com React que utiliza a API do TMDb para exibir os principais filmes e séries. Os usuários podem visualizar informações detalhadas sobre os programas, conferir os shows em lançamento, descobrir quais filmes e séries estão mais populares e salvar seus programas favoritos. Além disso, oferece um carrossel com os filmes em cartaz, proporcionando uma experiência dinâmica. O projeto foi concebido com o objetivo de aplicar os conhecimentos adquiridos em React e proporcionar aos usuários uma plataforma prática e intuitiva para explorar o mundo do entretenimento online.
 
+É possível ver o site em funcionamento ao visitar https://play-portal.vercel.app
+
 ![Site em funcionamento](src/assets/readme_midia/PlayPortal.gif)
 
 ## Tecnologias
@@ -29,12 +31,17 @@ Com o desenvolvimento desse projeto, pude colocar em prática conceitos essencia
 ## Layout
 
 ### Desktop
+
 ![](src/assets/readme_midia/desktop.png)
 ![](src/assets/readme_midia/desktop2.png)
+
 ### Tablet
+
 ![](src/assets/readme_midia/tablet.png)
 ![](src/assets/readme_midia/tablet2.png)
+
 ### Mobile
+
 ![](src/assets/readme_midia/mobile.png)
 
 ## Links
@@ -42,3 +49,4 @@ Com o desenvolvimento desse projeto, pude colocar em prática conceitos essencia
 - LinkedIn: https://www.linkedin.com/in/gabrielayresdev/
 - Repositório: https://github.com/gabrielayresdev/PlayPortal
   - Caso encontre algum bug e deseje reportar, favor, enviar email para gabriel.ar.fort@gmail.com
+- Deploy: https://play-portal.vercel.app
