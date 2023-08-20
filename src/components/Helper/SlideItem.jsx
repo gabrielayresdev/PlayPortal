@@ -5,6 +5,7 @@ import React from "react";
 import { useNavigate } from "react-router-dom";
 import filmeIcon from "/src/assets/icon-nav-movies.svg";
 import tvIcon from "/src/assets/icon-nav-tv-series.svg";
+import starIcon from "src/assets/star-solid.svg";
 
 const SlideItem = ({ data, type }) => {
   const global = React.useContext(GlobalContext);
@@ -70,7 +71,7 @@ const SlideItem = ({ data, type }) => {
             </span>
           )}
           <span>
-            <img src="src/assets/star-solid.svg" />
+            <img src={starIcon} />
             {data.vote_average}
           </span>
         </div>
